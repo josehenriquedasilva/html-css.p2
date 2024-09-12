@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Box</title>
+    <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
+        div.conteiner {
+            background-color: lightsalmon;
+
+            display: flex;
+            flex-flow: row wrap;
+        }
+
+        div.item {
+            background-color: lightblue;
+            border: 1px solid black;
+            text-align: center;
+            flex-basis: 200px;
+            
+        }
+
+        div#cxA {
+            flex-shrink: 1;
+            flex-grow: 1;
+            flex-basis: 600px;
+            
+        }
+
+        div#cxA > section {
+            background-color: brown;
+            margin: 10px;
+            padding: 10px;
+            
+            
+        }
+
+        div#cxB {
+            flex-shrink: 1;
+            flex-grow: 1;
+            flex-basis: 200px;
+        }
+      
+        div#cxC {
+            flex-shrink: 1;
+            flex-grow: 1;
+            flex-basis: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <div class="item" id="cxA">
+            <section>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est suscipit rem, maiores rerum molestiae quos? Ipsa nostrum odio iusto corporis dicta velit unde, architecto dolore? Maiores non impedit eveniet eius!</p>
+            </section>
+        </div>
+        <div class="item" id="cxB">B</div>
+        <div class="item" id="cxC">C</div>
+    </div>
+</body>
+</html>
