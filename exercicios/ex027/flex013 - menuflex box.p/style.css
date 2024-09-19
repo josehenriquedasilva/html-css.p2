@@ -15,44 +15,40 @@ body {
 }
 
 header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    height: 80px;
+    padding-bottom: 20px;
     background-color: darkgray;
 }
 
-menu {
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-    align-items: flex-start;
-
-    width: 100%;
-}
-
-header > menu > h1 {
-    flex: 0 0 300px;
+header > h1 {
+    flex: 0 0 200px;
     color: white;
     padding: 10px;
 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
-header > menu > .burguer {
-    display: block;
+header > nav {
+    display: flex;
+    
 }
 
-header > menu > p {
+header > nav > p {
     padding: 10px;
     margin: 10px;
     background-color: black;
     color: white;
-    flex: 0 1 100px;
+    flex: 1 1 100px;
     cursor: pointer;
 
     border-radius: 5px;
 }
 
-header > menu > p:hover {
+header > nav > p:hover {
     background-color: white;
     color: black;
     transition-duration: 0.3s ;
@@ -72,26 +68,3 @@ main > section {
     background-color: aliceblue;
 }
 
-@media screen and (max-width: 827px) {
-
-    header {
-        height: 350px;
-    }
-
-    menu {
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: stretch;
-    }
-    
-    header > menu > h1 {
-        flex: 0 0 auto;
-        text-align: center;
-    }
-
-    header > menu > p {
-        flex: 1 1 auto;
-        text-align: center;
-    }
-
-}
