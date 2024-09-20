@@ -34,7 +34,8 @@ header > h1 {
 
 header > nav {
     display: flex;
-    
+    flex-flow: row nowrap;
+    flex: 0 0 auto;
 }
 
 header > nav > p {
@@ -68,3 +69,23 @@ main > section {
     background-color: aliceblue;
 }
 
+@media screen and (max-width: 550px) {
+    header {
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+    }
+
+    header > h1 {
+        flex: 0 0 70px;
+    }
+
+    header > nav {
+        flex-flow: column nowrap;
+        width: 100%;
+    }
+
+    header > nav > p {
+        flex: 1 1 auto;
+        text-align: center;
+    }
+}
